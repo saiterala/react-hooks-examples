@@ -6,6 +6,10 @@ const Calculator = () => {
   const getResult = (a, b) => (
     parseInt(a || 0) + parseInt(b || 0)
   )
+  const handleReset = ()=> {
+    setInputA(0);
+    setInputB(0);
+  }
   return (
     <div>
       <h1> This is Calculator</h1>
@@ -16,7 +20,7 @@ const Calculator = () => {
           value={inputA}
           onChange={e => setInputA(e.target.value)}
         />
-        <br/>
+        <br />
         <label htmlFor="">B: </label>
         <input
           type="text"
@@ -26,8 +30,10 @@ const Calculator = () => {
       </p>
 
       <h2>
-        {`${inputA} + ${inputB} = `}{getResult(inputA,inputB)}
+        {`${parseInt(inputA || 0)} + ${parseInt(inputB || 0)} = `}
+        {getResult(inputA, inputB)}
       </h2>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }

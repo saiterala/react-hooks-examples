@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const [count, setCount] = useState(0);
 
-  const handleCounterPlus = () => {
-    setCounter(counter + 1);
+  const handleClick = () => {
+    setCount(count + 1);
   };
   return (
     <div>
-      <h1>Counter: {counter}</h1>
-      <button onClick={handleCounterPlus}>+</button>
-      <button onClick={() => setCounter(counter - 1)}>-</button>
+      <h1>This is Counter</h1>
+      <p>You clicked {count} times</p>
+      <button onClick={handleClick}>Click me</button>
+      <button onClick={()=> setCount(0)}>Reset</button>
     </div>
   );
 };
