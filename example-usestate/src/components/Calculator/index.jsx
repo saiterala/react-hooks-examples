@@ -3,25 +3,23 @@ import React, { useState } from 'react';
 const Calculator = () => {
   const [inputA, setInputA] = useState(0);
   const [inputB, setInputB] = useState(0);
-  const getResult = (a, b) => (
-    parseInt(a || 0) + parseInt(b || 0)
-  )
-  const handleReset = ()=> {
+  const getResult = (a, b) => parseInt(a || 0) + parseInt(b || 0);
+  const handleReset = () => {
     setInputA(0);
     setInputB(0);
-  }
+  };
   return (
     <div>
       <h1> This is Calculator</h1>
       <p>
-        <label htmlFor="">A: </label>
+        <label>A: </label>
         <input
           type="text"
           value={inputA}
           onChange={e => setInputA(e.target.value)}
         />
         <br />
-        <label htmlFor="">B: </label>
+        <label>B: </label>
         <input
           type="text"
           value={inputB}
@@ -36,6 +34,6 @@ const Calculator = () => {
       <button onClick={handleReset}>Reset</button>
     </div>
   );
-}
+};
 
 export default Calculator;

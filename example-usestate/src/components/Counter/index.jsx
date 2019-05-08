@@ -11,7 +11,8 @@ const Counter = () => {
       <h1>This is Counter</h1>
       <p>You clicked {count} times</p>
       <button onClick={handleClick}>Click me</button>
-      <button onClick={()=> setCount(0)}>Reset</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+      {/* <button onClick{()=> this.setState({count: 0})}></button> */}
     </div>
   );
 };
