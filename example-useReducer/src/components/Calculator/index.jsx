@@ -26,7 +26,7 @@ const Calculator = () => {
   return (
     <CalculatorContext.Provider value={dispatch} >
       <h1> This is Calculator</h1>
-     <CalculatorInputs state={state} dispatch={dispatch}/>
+     <CalculatorInputs state={state} />
 
       <h2>
         {`${parseInt(state.a || 0)} + ${parseInt(state.b || 0)} = `}
